@@ -16,5 +16,10 @@ namespace MVC_Tutoriall.Controllers
 
             return View(customer);
         }
+        public ActionResult Create()
+        {
+            var cust = new Customer();
+            return View(cust);
+        }
     }
 }

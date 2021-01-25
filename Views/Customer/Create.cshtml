@@ -1,0 +1,24 @@
+﻿@model MVC_Tutoriall.Models.Customer
+<br />
+<table class=" table table-bordered table-responsive table-hover text-center">
+    <tr>
+        <td>@Html.Label("ID", "Customer id")</td>
+        <td>@Html.TextBox("ID")</td>
+    </tr>
+    <tr>
+
+        <td>@Html.Label("Name", "Customer Name")</td>
+        <td>@Html.TextBox("Name")</td>
+    </tr>
+    <tr>
+
+        <td>@Html.Label("Address", "Customer Adress")</td>
+        <td>@Html.TextArea("Address")</td>
+    </tr>
+    <tr>
+
+    <td>@Html.Label("Age", "Customer Age")</td>
+    <td>@Html.TextBox("Age")</td>
+    </tr>
+</table>
+@Html.ActionLink("Go To Customer", "DisplayCustomer")
