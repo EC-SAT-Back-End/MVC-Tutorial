@@ -1,0 +1,29 @@
+﻿@model MVC_Tutoriall.Models.Customer
+
+@{
+    ViewBag.Title = "DisplayCustomer";
+}
+
+<h2>DisplayCustomer</h2>
+<table class="table table-bordered table-hover text-center">
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Address</td>
+        <td>Age</td>
+    </tr>
+    <tr>
+        <td>@Model.ID</td>
+        <td>@Model.Name</td>
+        <td>@Model.Address</td>
+        <td>@Model.Age</td>
+    </tr>
+</table>
+<div>
+    <h3>ID: @Model.ID</h3>
+    <h3>Name: @Model.Name</h3>
+    <h3>Address: @Model.Address</h3>
+    <h3>Age: @Model.Age</h3>
+    <h3></h3>
+</div>
+
