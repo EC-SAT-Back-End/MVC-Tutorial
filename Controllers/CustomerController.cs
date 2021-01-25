@@ -18,8 +18,17 @@ namespace MVC_Tutoriall.Controllers
         }
         public ActionResult Create()
         {
-            var cust = new Customer();
-            return View(cust);
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(Customer customer)
+        {
+            if (ModelState.IsValid)
+            {
+                RedirectToAction("DisplayCustomer");
+
+            }
+            return View(customer);
         }
     }
 }
