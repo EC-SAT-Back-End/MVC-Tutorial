@@ -171,6 +171,8 @@
     <Content Include="Views\Computer\Display.cshtml" />
     <Content Include="Views\Customer\DisplayCustomer.cshtml" />
     <Content Include="Views\Customer\Create.cshtml" />
+    <Content Include="Views\Shared\_header.cshtml" />
+    <Content Include="Views\Shared\_footer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
