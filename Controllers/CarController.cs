@@ -15,6 +15,10 @@ namespace MVC_Tutoriall.Controllers
         {
             return Content("<h1> From content Resault</h1>");
         }
+        public ActionResult RenderBody()
+        {
+            return View();
+        }
         [Route("Details/{id:int}")]
         public ContentResult Details(int id)
         {
