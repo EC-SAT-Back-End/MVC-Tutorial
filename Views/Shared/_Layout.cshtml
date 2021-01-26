@@ -23,7 +23,10 @@
         <div class="container body-content">
 
             @RenderBody()
-            @RenderSection("Reviews",false)
+            @RenderSection("Reviews", false)
+            @{
+                Html.RenderPartial("_menu");
+            }
 
             @* footer *@
             @RenderPage("~/Views/Shared/_footer.cshtml")
