@@ -23,6 +23,7 @@
         <div class="container body-content">
 
             @RenderBody()
+            @RenderSection("Reviews",false)
 
             @* footer *@
             @RenderPage("~/Views/Shared/_footer.cshtml")
