@@ -49,10 +49,13 @@ namespace MVC_Tutoriall.Controllers
             if (cust!= null)
             {
                 ViewBag.Result = "Result is :" + cust ;
+                ViewData["State"] = true;
             }
             else
             {
                 ViewBag.Result = "Result is not found :" + cust;
+                ViewData["State"] = false;
+
             }
             return View(cust);
 

@@ -16,7 +16,23 @@
 </div>
 
 <div>
-    <h3 class="alert alert-info"> @ViewBag.Result</h3>
+    @{
+        if (ViewBag.Result != null)
+        {
+
+
+            if ((bool)ViewData["State"] == true)
+            {
+                <h3 class="alert alert-success"> @ViewBag.Result</h3>
+            }
+            else
+            {
+                <h3 class="alert alert-danger"> @ViewBag.Result</h3>
+
+            }
+        }
+    }
+    @*<h3 class="alert alert-info"> @ViewBag.Result</h3>*@
     <h4>Customer</h4>
     <hr />
     <dl class="dl-horizontal">
