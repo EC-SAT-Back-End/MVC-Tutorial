@@ -30,5 +30,32 @@ namespace MVC_Tutoriall.Controllers
             }
             return View(customer);
         }
+        public ActionResult Search()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult Search(string name)
+        {
+            List<Customer> customers = new List<Customer>() {
+                new Customer {ID= 1 ,Name ="mohamed",Address ="alex",Age=10},
+                new Customer {ID= 1 ,Name ="hamza",Address ="alex",Age=10},
+                new Customer {ID= 1 ,Name ="mostafa",Address ="por",Age=10},
+                new Customer {ID= 1 ,Name ="mero",Address ="baleh",Age=10},
+            };
+            var cust = customers.Find(a => a.Name == name);
+            if (cust!= null)
+            {
+                ViewBag.Result = "Result is :" + cust ;
+            }
+            else
+            {
+                ViewBag.Result = "Result is not found :" + cust;
+            }
+            return View(cust);
+
+        }
     }
 }
