@@ -10,6 +10,7 @@ namespace MVC_Tutoriall.Controllers
     public class CustomerController : Controller
     {
         // GET: Customer
+        public string VarLocal;
         public ActionResult DisplayCustomer()
         {
             var customer = new Customer(100, "ahmed", "cairo", 32);
@@ -18,6 +19,8 @@ namespace MVC_Tutoriall.Controllers
         }
         public ActionResult Create()
         {
+            TempData["Temp"] = "Form Create action ";
+            VarLocal = "From VarLocal";
             return View();
         }
         [HttpPost]
@@ -32,6 +35,7 @@ namespace MVC_Tutoriall.Controllers
         }
         public ActionResult Search()
         {
+            ViewBag.Massege = TempData["Temp"];
             return View();
         }
 
@@ -39,6 +43,7 @@ namespace MVC_Tutoriall.Controllers
         [HttpPost]
         public ActionResult Search(string name)
         {
+
             List<Customer> customers = new List<Customer>() {
                 new Customer {ID= 1 ,Name ="mohamed",Address ="alex",Age=10},
                 new Customer {ID= 1 ,Name ="hamza",Address ="alex",Age=10},

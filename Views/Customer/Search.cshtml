@@ -6,6 +6,8 @@
 }
 
 <h2>Search</h2>
+<h1>@ViewBag.Massege</h1>
+
 <br />
 <div>
     @using (Html.BeginForm("Search", "Customer", FormMethod.Post))
@@ -63,5 +65,5 @@
 </div>
 <p>
     @*@Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")*@
+        @Html.ActionLink("Back to List", "Index")*@
 </p>
